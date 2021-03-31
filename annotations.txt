@@ -1,0 +1,2 @@
+em ambiente de dev não usaremos tsc ou babel, somente o sucrase para compilar o .ts
+em prod, podemos usar o tsc ou babel para fazer o bundle final;
