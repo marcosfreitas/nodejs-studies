@@ -1,8 +1,8 @@
 import { Document, Schema, Model, model } from "mongoose";
 import { UserInterface } from "@interfaces/UserInterface";
 
-export interface UserModel extends UserInterface, Document {
-  fullName(): string;
+export interface UserDoc extends UserInterface, Document {
+  // fullName(): string;
 }
 
 const UserSchema = new Schema(
@@ -16,8 +16,9 @@ const UserSchema = new Schema(
   }
 );
 
-UserSchema.methods.fullName = function (): string {
+/* @bug UserSchema.methods.fullName = function (): string {
+  console.log("ok", this.firstName);
   return this.firstName.trim() + " " + this.lastName.trim();
-};
+}; */
 
-export const UserModel: Model<UserModel> = model<UserModel>("User", UserSchema);
+export const UserModel: Model<UserDoc> = model<UserDoc>("User", UserSchema);

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { UserModel } from "@schemas/UserModel";
+import { UserModel } from "@models/UserModel";
 
 class UserController {
   public async index(req: Request, res: Response): Promise<Response> {
