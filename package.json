@@ -10,8 +10,7 @@
     "mongoose": "^5.12.3"
   },
   "scripts": {
-    "dev": "nodemon src/server.ts",
-    "build": "sucrase ./src -d ./dist --transforms typescript"
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts"
   },
   "devDependencies": {
     "@types/cors": "^2.8.10",
@@ -27,9 +26,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-promise": "^4.3.1",
-    "nodemon": "^2.0.7",
     "prettier": "^2.2.1",
-    "sucrase": "^3.17.1",
+    "ts-node-dev": "^1.1.6",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^4.2.3"
   }
 }
